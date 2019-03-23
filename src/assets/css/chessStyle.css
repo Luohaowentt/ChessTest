@@ -1,0 +1,17 @@
+.chessboard{
+  width: 900px;
+  height: 900px;
+  border-radius:25px;
+  margin: 0 auto;
+  padding: 30px;
+  background: bisque;
+}
+
+.chessBox{
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background: aliceblue;
+  border: black solid;
+  margin: 0;
+}
