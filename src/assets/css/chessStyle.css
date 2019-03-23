@@ -7,11 +7,47 @@
   background: bisque;
 }
 
-.chessBox{
+.chessBox_1{
   width: 60px;
   height: 60px;
   display: inline-block;
-  background: aliceblue;
-  border: black solid;
+  background: #5d768a;
+  border: #8f8f8f dashed;
   margin: 0;
+  padding: 0;
+}
+
+.chessBox_2{
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background: #75a4b3;
+  border: #8f8f8f dashed;
+  margin: 0;
+  padding: 0;
+}
+
+.chess-white{
+  display: inline-block;
+  padding: 0;
+  width:50px;
+  height:50px;
+  margin:0;
+  border-radius: 50px;
+  background-color: white
+}
+.chess-black{
+  display: inline-block;
+  width:50px;
+  height:50px;
+  margin:0 ;
+  padding: 0;
+  border-radius: 50px;
+  background-color: black
+}
+.chess-non{
+  display: inline-block;
+  width:50px;
+  height:50px;
+  margin:0;
 }

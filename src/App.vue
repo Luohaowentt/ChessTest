@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <backgrand></backgrand>
+    <Background></Background>
     <router-view/>
   </div>
 </template>
 
 <script>
-import Backgrand from '@/components/Backgrand'
+import Background from '@/components/Backgrand'
 export default {
   name: 'App',
-  components: {Backgrand}
+  components: {Background}
 }
 </script>
 
