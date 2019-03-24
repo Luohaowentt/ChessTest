@@ -34,7 +34,8 @@
   height:50px;
   margin:0;
   border-radius: 50px;
-  background-color: white
+  background: linear-gradient(white, antiquewhite);
+  box-shadow: 2px 2px 1px #292929;
 }
 .chess-black{
   display: inline-block;
@@ -43,11 +44,17 @@
   margin:0 ;
   padding: 0;
   border-radius: 50px;
-  background-color: black
+  background: linear-gradient(black, #292929);
+  box-shadow: 2px 2px 1px #292929;
 }
 .chess-non{
   display: inline-block;
   width:50px;
   height:50px;
   margin:0;
+}
+.right-list{
+  height: 500px;
+ background: aqua;
+  float: right;
 }
