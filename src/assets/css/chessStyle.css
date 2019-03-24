@@ -1,3 +1,10 @@
+span{
+  font-size: 5px;
+  line-height: 2px;
+}
+h3{
+  display: inline;
+}
 .chessboard{
   width: 900px;
   height: 900px;
@@ -53,8 +60,23 @@
   height:50px;
   margin:0;
 }
-.right-list{
-  height: 500px;
- background: aqua;
-  float: right;
+
+.title-message{
+  height: 100px;
+  text-align: center;
+
+}
+.main-left{
+  position: absolute;
+  width: 200px;
+  line-height: 50px;
+  padding-left:30px;
+}
+.title-main{
+  height: 88px;
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+
 }
