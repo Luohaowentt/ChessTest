@@ -2,24 +2,29 @@
   <div>
     <div class="title-message">
       <div class="title-main">
+        <div  class="btn-list" style="margin-bottom: 20px;">
+          <el-button @click="show2 = !show2">游戏菜单</el-button>
+        </div>
         <h1>贴贴五子棋</h1><br>
         <h3 v-if="winFlag===false">回合数：{{turn}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{player}}方的回合&nbsp;&nbsp;&nbsp;&nbsp; </h3>
         <h3 v-else>游戏结束 请点击</h3><el-button  round @click="clearBoard">重新开始</el-button>
       </div>
     </div>
     <div class="chess-main">
-      <div class="main-left">
-        <h3>设置先手</h3>
-        <el-radio v-model="radio" label="1">白棋先行</el-radio>
-        <el-radio v-model="radio" label="2">黑棋先行</el-radio><br>
-        <span style="line-height: 1px">（在点击重新开始后生效）</span>
-       <br><br>
-        <h4>黑棋选手名称</h4><el-input v-model="inputBlack" placeholder="请输入内容"></el-input>
-        <h4>黑方获胜数： {{blackWin}}</h4><br>
-        <h4>白旗棋选手名称</h4><el-input v-model="inputWhite" placeholder="请输入内容"></el-input>
-        <h4>白方获胜数： {{whiteWIN}}</h4>
-        <el-button  round @click="clearWin">重置获胜数</el-button>
-      </div>
+      <transition name="el-zoom-in-center">
+        <div class="main-left transition-box" v-show="show2">
+            <h4>设置先手</h4>
+            <el-radio v-model="radio" label="1">白棋先行</el-radio>
+            <el-radio v-model="radio" label="2">黑棋先行</el-radio><br>
+            <span style="line-height: 1px">（在点击重新开始后生效）</span>
+            <br><br>
+            <h4>黑棋选手名称</h4><el-input v-model="inputBlack" placeholder="请输入内容"></el-input>
+            <h4>黑方获胜数： {{blackWin}}</h4><br>
+            <h4>白旗棋选手名称</h4><el-input v-model="inputWhite" placeholder="请输入内容"></el-input>
+            <h4>白方获胜数： {{whiteWIN}}</h4><br>
+            <el-button  round @click="clearWin">重置获胜数</el-button>
+        </div>
+      </transition>
     <div class="chessboard">
       <div v-for="boxY in 14" :key="boxY">
         <div :class="getChessBoxClass(boxX,boxY)" :id="getChessBoxId(boxX,boxY)" v-for="boxX in 14" :key="boxX" >
@@ -36,6 +41,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
+      show2: true,
       radio: '1',
       inputBlack: '黑骑士',
       inputWhite: '白棋士',
@@ -231,6 +237,12 @@ export default {
     clearWin: function () {
       this.whiteWIN = 0
       this.blackWin = 0
+    },
+    openList: function () {
+      console.log(this.isCollapse)
+    },
+    closeList: function () {
+      console.log(this.isCollapse)
     }
   }
 }

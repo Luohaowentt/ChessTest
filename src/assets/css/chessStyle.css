@@ -64,11 +64,12 @@ h3{
 .title-message{
   height: 100px;
   text-align: center;
-
+  margin: 30px 0;
 }
 .main-left{
   position: absolute;
   width: 200px;
+  left: 25px;
   line-height: 50px;
   padding-left:30px;
 }
@@ -78,5 +79,21 @@ h3{
   width: 40%;
   text-align: center;
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+.btn-list{
+  position:absolute;
+  left:55px;
+  top: 90px;
+}
 
+.transition-box {
+  margin-bottom: 10px;
+  width: 200px;
+  /*height: 100px;*/
+  border-radius: 4px;
+  background-color: #f0f8ff;
+  color: #292929;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin-right: 20px;
 }
